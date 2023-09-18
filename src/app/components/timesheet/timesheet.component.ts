@@ -21,11 +21,11 @@ export class TimesheetComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private departmentService: DepartmentsService,
+    private departmentsService: DepartmentsService,
   ) { }
 
   ngOnInit() {
-    this.departments = this.departmentService.departments;
+    this.departments = this.departmentsService.departments;
     this.department = this.departments.find(department => department.id === this.route.snapshot.params['id']);
   }
 
