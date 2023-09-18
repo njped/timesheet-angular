@@ -1,7 +1,7 @@
 export interface Employee {
   [key: string]: any
 
-  id: string;
+  id?: string;
   departmentId: string | undefined;
   name: string;
   payRate: number;

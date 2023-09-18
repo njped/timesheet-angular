@@ -14,6 +14,10 @@ import { AnalyticsTableComponent } from './components/analytics-table/analytics-
 import { MaterialModule } from './modules/material/material.module';
 import { FormsModule } from '@angular/forms';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 @NgModule({
   declarations: [					
     AppComponent,
@@ -30,6 +34,8 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

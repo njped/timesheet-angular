@@ -27,7 +27,9 @@ export class DepartmentsComponent implements OnInit {
   // });
 
   this.$departments = this.departmentsService.getDepartments();
+  
   }
+
   goToDepartment(departmentId: string) {
     this.router.navigate(['./timesheet', {id: departmentId}]);
 }
